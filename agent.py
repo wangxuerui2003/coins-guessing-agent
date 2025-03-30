@@ -17,15 +17,15 @@ class Trainer:
         action = -1
         while True:
             if state.opponent_points < state.points:
-                action = round(
-                    np.random.normal(loc=state.points + 2, scale=5, size=1)[0]
-                )
-                # action = np.random.randint(0, state.points)
+                # action = round(
+                #     np.random.normal(loc=state.points + 2, scale=5, size=1)[0]
+                # )
+                action = np.random.randint(0, state.points)
             else:
-                action = round(
-                    np.random.normal(loc=state.points - 2, scale=5, size=1)[0]
-                )
-                # action = np.random.randint(0, state.points)
+                # action = round(
+                #     np.random.normal(loc=state.points - 2, scale=5, size=1)[0]
+                # )
+                action = np.random.randint(0, state.points)
             if action >= 0 and action <= state.points:
                 return action
 

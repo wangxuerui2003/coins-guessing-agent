@@ -8,7 +8,7 @@ p2_points = 50
 p1_wins = 0
 p2_wins = 0
 
-agent = Player("player1", 50, ROUNDS)
+agent = Player("agent", 50, ROUNDS)
 agent.load()
 print(agent.q_table)
 
